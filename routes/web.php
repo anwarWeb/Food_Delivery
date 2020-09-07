@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/customer', 'CustomerController@index')->name('customer')->middleware('customer');
+
+Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
