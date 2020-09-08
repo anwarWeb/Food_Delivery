@@ -37,7 +37,7 @@ class LoginController extends Controller
                 return $this->redirectTo;
                 break;
             case 2:
-                $this->redirectTo = '/admin';
+                $this->redirectTo = '/admin/category';
                 return $this->redirectTo;
                 break;
            

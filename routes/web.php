@@ -24,4 +24,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/customer', 'CustomerController@index')->name('customer')->middleware('customer');
 
-Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
+// Route::get('/admin', 'AdminController@index')->name('admin')->middleware('admin');
+
+
+Route::middleware(['admin'])->group(function () {
+    Route::prefix('admin')->group(function () {
+
+    
+        Route::resource('category','Admin\CategoryController');
+        
+        Route::resource('food','Admin\FoodController');
+    
+     
+    
+    });
+});
