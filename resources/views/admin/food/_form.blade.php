@@ -46,7 +46,7 @@
         <div class="col-sm-12">
             <div class="form-group">
                 {!! Form::label('description', 'Description') !!}
-                {!! Form::textarea('description', null, ['class' => 'textarea form-control','placeholder'=>'Place some text here']) !!}
+                {!! Form::text('description', null, ['class' => 'form-control','placeholder'=>'Place some text here']) !!}
                
             </div>
         </div>

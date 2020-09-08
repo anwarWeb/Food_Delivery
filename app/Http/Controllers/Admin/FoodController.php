@@ -99,8 +99,7 @@ class FoodController extends Controller
     public function update(Request $request, Food $food)
     {
         //
-        
-        
+
         $data = $request->validate([
             'title' => 'required|max:255',
             'category_id'=> 'required',
