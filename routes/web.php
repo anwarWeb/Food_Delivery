@@ -39,3 +39,7 @@ Route::middleware(['admin'])->group(function () {
     
     });
 });
+
+Route::resource('address','AddressController');
+
+

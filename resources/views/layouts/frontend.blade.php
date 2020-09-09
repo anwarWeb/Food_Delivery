@@ -74,6 +74,7 @@
 				</div>
 				<div class="col-xs-8 text-right menu-1">
 					<ul>
+					<li><a href="{{route('address.create')}}">Add Address</a></li>
 						<li><a href="menu.html">Menu</a></li>
 						<li class="has-dropdown">
 							<a href="services.html">Services</a>
