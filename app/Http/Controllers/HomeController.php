@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $foods = Food::all();
+        $foods = Food::with('category')->get();
         return view('frontend.index',compact('foods'));
     }
 }

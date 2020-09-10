@@ -6,13 +6,26 @@
 <div class="categories-shop">
    <div class="container-fluid all">
        <div class="row">
-           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-               <div class="shop-cat-box">
-                   <img class="img-fluid" src="{{asset('frontend/img/90.jpg') }}" alt="" />
-                   <a class="btn hvr-hover" href="#">Sweets</a>
-               </div>
-           </div>
-           <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+           
+        @foreach ($foods as $food)
+       
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="shop-cat-box">
+                    <img class="img-fluid" src="{{$food->image? asset('storage/'.$food->image->url):'//placehold.it/100'}}"  alt="food image">
+                    <div><p>{{$food->title}}</p></div>
+                    <div>
+                        <p>{{$food->price}}</p>
+                    </div>
+                    <div>
+                    <a class="btn hvr-hover" href="#">{{$food->category->title}}</a>
+                        <a class="btn hvr-hover" href="#">Add to Cart</a>
+                    </div>
+                    
+                </div>
+            </div>
+        @endforeach
+           
+           {{-- <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                <div class="shop-cat-box">
                    <img class="img-fluid" src="{{asset('frontend/img/74.jpg')}}" alt="" />
                    <a class="btn hvr-hover" href="#">Fast food</a>
@@ -29,7 +42,7 @@
                    <img class="img-fluid" src="{{asset('frontend/img/81.jpg')}}" alt="" />
                    <a class="btn hvr-hover" href="#">Indian special</a>
                </div>
-           </div>
+           </div> --}}
        </div>
    </div>
 </div>
