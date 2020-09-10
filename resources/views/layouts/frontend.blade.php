@@ -1,232 +1,190 @@
-<!DOCTYPE HTML>
-<!--
-	Aesthetic by gettemplates.co
-	Twitter: http://twitter.com/gettemplateco
-	URL: http://gettemplates.co
--->
-<html>
-	<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Savory &mdash; Free Website Template, Free HTML5 Template by GetTemplates.co</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="GetTemplates.co" />
-
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-	
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="{{asset('frontend/css/animate.css') }}">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="{{asset('frontend/css/icomoon.css') }}">
-	<!-- Themify Icons-->
-	<link rel="stylesheet" href="{{asset('frontend/css/themify-icons.css') }}">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css') }}">
-
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="{{asset('frontend/css/magnific-popup.css')}}">
-
-	<!-- Bootstrap DateTimePicker -->
-	<link rel="stylesheet" href="{{asset('frontend/css/bootstrap-datetimepicker.min.css') }}">
-
-	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}">
-	<link rel="stylesheet" href="{{asset('frontend/css/owl.theme.default.min.css') }}">
-
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="{{asset('frontend/css/style.css') }}">
-
-	<!-- Modernizr JS -->
-	<script src="{{asset('frontend/js/modernizr-2.6.2.min.js') }}"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-	</head>
-	<body>
-		
-	<div class="gtco-loader"></div>
-	
-	<div id="page">
-
-	
-	<!-- <div class="page-inner"> -->
-	<nav class="gtco-nav" role="navigation">
-		<div class="gtco-container">
-			<div class="row">
-				<div class="col-sm-4 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">Savory <em>.</em></a></div>
-				</div>
-				<div class="col-xs-8 text-right menu-1">
-					<ul>
-					<li><a href="{{route('address.create')}}">Add Address</a></li>
-						<li><a href="menu.html">Menu</a></li>
-						<li class="has-dropdown">
-							<a href="services.html">Services</a>
-							<ul class="dropdown">
-								<li><a href="#">Food Catering</a></li>
-								<li><a href="#">Wedding Celebration</a></li>
-								<li><a href="#">Birthday's Celebration</a></li>
-							</ul>
-						</li>
-                        <li><a href="contact.html">Contact</a></li>
-                        {{-- <li class="attr-nav">
-                            <ul>
-                                
-                                @guest
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                              
-                            @else
-                                <li class="nav-item dropdown">
-                                    
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        <i class="fa fa-user" aria-hidden="true"></i>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
-                                    </a>
-        
-                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                      
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
-        
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
-                            @endguest
-                            </ul>
-                        </li> --}}
-                    @if (Auth::user())
-                    <li class="nav-item dropdown">
-                                    
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            {{ Auth::user()->name }} <span class="caret"></span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                          
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                             document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-                    @else
-                        <li ><a href="{{ route('login') }}"><span>Login</span></a></li>
-                        <li ><a href="{{ route('register') }}"><span>Register</span></a></li>
-                    @endif
-                       
-					</ul>	
-				</div>
-			</div>
-			
-		</div>
-	</nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{asset('frontend/main.css') }}">
+    <title>Restaurant food</title>
+</head>
+<body>
     
-    @include('flash-message')
-    @yield('content')
-	
-	<footer id="gtco-footer" role="contentinfo" style="background-image: url(images/img_bg_1.jpg)" data-stellar-background-ratio="0.5">
-		<div class="overlay"></div>
-		<div class="gtco-container">
-			<div class="row row-pb-md">
+    <div class="header" id="topheader">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container text-uppercase p-2 m2">
+            <a class="navbar-brand font-weight-bold" href="index.html"><i class="fa fa-cutlery"></i>&nbsp;&nbsp;&nbsp;FOOD</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active ">
+                  <a class="nav-link " href="index.html">&nbsp;&nbsp;&nbsp;Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">&nbsp;&nbsp;&nbsp;About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="menu.html">&nbsp;&nbsp;&nbsp;Menu</a>
+                </li>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="franch.html">&nbsp;&nbsp;&nbsp;Franchise</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">&nbsp;&nbsp;&nbsp;Contact us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">&nbsp;&nbsp;<i class="fa fa-cart-plus"></i></a>
+                  </li>
+                
+              </ul>
+            </div>
+            </div>
+          </nav>
 
-				
+          <section class="header-section">
+            <div class="center-div">
+                <h1 class="font-weight-bold">WE PROVIDE WORLD BEST MEAL</h1>
+                <P>The best food with the top services</P>
+                <div class="header-buttons">
+                    <a href="#">Login</a>
+                    <a href="#">Sign up</a>
+                </div>
+            </div>
+        </section>
+     </div>
+      
 
-				
-				<div class="col-md-12 text-center">
-					<div class="gtco-widget">
-						<h3>Get In Touch</h3>
-						<ul class="gtco-quick-contact">
-							<li><a href="#"><i class="icon-phone"></i> +1 234 567 890</a></li>
-							<li><a href="#"><i class="icon-mail2"></i> info@GetTemplates.co</a></li>
-							<li><a href="#"><i class="icon-chat"></i> Live Chat</a></li>
-						</ul>
-					</div>
-					<div class="gtco-widget">
-						<h3>Get Social</h3>
-						<ul class="gtco-social-icons">
-							<li><a href="#"><i class="icon-twitter"></i></a></li>
-							<li><a href="#"><i class="icon-facebook"></i></a></li>
-							<li><a href="#"><i class="icon-linkedin"></i></a></li>
-							<li><a href="#"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</div>
-				</div>
+     <h3>OUR SERVICES</h3>
+     <div class="categories-shop">
+        <div class="container-fluid all">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="{{asset('frontend/img/90.jpg') }}" alt="" />
+                        <a class="btn hvr-hover" href="#">Sweets</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="{{asset('frontend/img/74.jpg')}}" alt="" />
+                        <a class="btn hvr-hover" href="#">Fast food</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="{{asset('frontend/img/72.jpg')}}" alt="" />
+                        <a class="btn hvr-hover" href="#">Drinks</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img class="img-fluid" src="{{asset('frontend/img/81.jpg')}}" alt="" />
+                        <a class="btn hvr-hover" href="#">Indian special</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-				<div class="col-md-12 text-center copyright">
-					<p><small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="http://gettemplates.co/" target="_blank">GetTemplates.co</a> Demo Images: <a href="http://unsplash.com/" target="_blank">Unsplash</a></small></p>
-				</div>
+     
 
-			</div>
-
-			
-
-		</div>
-	</footer>
-	<!-- </div> -->
-
-	</div>
-
-	<div class="gototop js-top">
-		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
-	</div>
-	
-	<!-- jQuery -->
-	<script src="{{asset('frontend/js/jquery.min.js') }}"></script>
-	<!-- jQuery Easing -->
-	<script src="{{asset('frontend/js/jquery.easing.1.3.js') }}"></script>
-	<!-- Bootstrap -->
-	<script src="{{asset('frontend/js/bootstrap.min.js') }}"></script>
-	<!-- Waypoints -->
-	<script src="{{asset('frontend/js/jquery.waypoints.min.js')}}"></script>
-	<!-- Carousel -->
-	<script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
-	<!-- countTo -->
-	<script src="{{asset('frontend/js/jquery.countTo.js')}}"></script>
-
-	<!-- Stellar Parallax -->
-	<script src="{{asset('frontend/js/jquery.stellar.min.js')}}"></script>
-
-	<!-- Magnific Popup -->
-	<script src="{{asset('frontend/js/jquery.magnific-popup.min.js')}}"></script>
-	<script src="{{asset('frontend/js/magnific-popup-options.js')}}"></script>
-	
-	<script src="{{asset('frontend/js/moment.min.js') }}"></script>
-	<script src="{{asset('frontend/js/bootstrap-datetimepicker.min.js') }}"></script>
+     <h3>ENJOY OUR CUISINE! </h3>
+     <div class="categories-shop">
+        <div class="container all">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img src="{{asset('frontend/img/1.png')}}" class="rounded-circle" alt="Cinque Terre" width="304" height="236"><br> 
+                        <a class="btn1 hvr-hover" href="#"><p>Book your table</p></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img src="{{asset('frontend/img/2.jpg')}}" class="rounded-circle" alt="Cinque Terre" width="304" height="236"><br> 
+                        <a class="btn1 hvr-hover" href="#"><p>Call Now</p></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="shop-cat-box">
+                        <img src="{{asset('frontend/img/7.png')}}" class="rounded-circle" alt="Cinque Terre" width="304" height="236"><br> 
+                        <a class="btn1 hvr-hover" href="#"><p>Order Now</p></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
 
 
-	<!-- Main -->
-	<script src="{{asset('frontend/js/main.js') }}"></script>
 
-	</body>
+
+
+     
+     <div class="footer" >
+        <footer class="page-footer bg-light">
+          <div class="bg-success">
+           <div class="container">
+             <div class="row py-4 d-flex align-item-center">
+               <div class="col-md-12 text-center">
+                 <a href="#"><i class="fa fa-facebook-square  mr-4 face"></i></a>
+                 <a href="#"><i class="fa fa-instagram  mr-4 inst"></i></a>
+                 <a href="#"><i class="fa fa-linkedin-square  mr-4 link"></i></a>
+                 <a href="#"><i class="fa fa-google-plus-square  mr-4 go"></i></a>
+                 <a href="#"><i class="fa fa-twitter-square  twit"></i></a>
+               </div>
+             </div>
+           </div>
+          </div>
+          
+          <div class="mt-5 pt-5 pb-5 footer">
+            <div class="container">
+              <div class="row  by">
+                <div class="col-lg-5 col-xs-12 about-company">
+                  <h2>About</h2>
+                  <p class="pr-5 text-50 font-weight-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis </p>
+                  <p><a href="#"><i class="fa fa-facebook-square mr-1"></i></a>
+                    <a href="#"><i class="fa fa-linkedin-square"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-twitter-square"></i></a>
+                    <a href="#"><i class="fa fa-google-plus-square"></i></a>
+                    </p>
+                </div>
+                <div class="col-lg-3 col-xs-12 links">
+                  <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+                    <ul class="m-0 p-0">
+                      <li>- <a href="index.html">Home</a></li>
+                      <li>- <a href="about.html">About</a></li>
+                      <li>- <a href="menu.html">Menu</a></li>
+                      <li>- <a href="franch.html">Franchise</a></li>
+                      <li>- <a href="">Contact us</a></li>
+                      
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-xs-12 location">
+                  <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+                  <p>B-33 Gautam nagar behind ondoor concept mp nagar Bhopal</p>
+                  <p class="mb-0"><i class="fa fa-phone mr-3"></i>07554012502</p>
+                  <p><i class="fa fa-envelope-o mr-3"></i>contact@bytezip.in</p>
+                </div>
+              </div>
+              <div class="row mt-5">
+                <div class="col copyright">
+                  <p class="per"><small class="text-center-50">© 2020. All Rights Reserved.</small></p>
+                </div>
+              </div>
+            </div>
+            </div>
+          </footer>
+         </div>
+        
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
-

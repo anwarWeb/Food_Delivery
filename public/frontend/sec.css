@@ -1,0 +1,465 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    
+    
+}
+a:hover{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    font-family: cursive;
+}
+.nav-item a{
+    color: black !important;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.dropdown-menu{
+    background-color: lightgray !important;
+    border-radius: 30px;
+}
+
+.fa{
+    font-size: 29px;
+}
+.nav-item a:hover{
+    background-color: lightgray;
+    border-radius: 40px;
+    
+}
+.bg-success{
+    background-color: transparent !important;
+    margin-bottom: -38px;
+}
+
+.col-md-12 a{
+    color:black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.col-md-12 a:hover{
+    color: darkblue;
+}
+
+
+.footer{
+    background: black;
+    color:white;
+    margin-top: 110px;
+     }
+    .links ul {
+    list-style-type: none;
+    color:white !important;
+    }
+    .links ul li a{
+        color: white !important;
+     }
+     .about-company i{
+        font-size: 25px;
+        color: white;
+     }
+  .location i{
+      font-size: 18px;
+  }
+   
+  .per{
+      text-align: center;
+      color: white;
+      font-size: 29px;
+      font-weight: bold;
+  }
+  .face{
+      color :skyblue;
+  }
+  .inst{
+      color:red;
+  }
+  .link{
+      color: #4180CB;
+  }
+  .go{
+      color:brown;
+  }
+  .twit{
+      color:#4180CB;
+  }
+
+
+
+.mb-60 {
+	margin-bottom: 60px;
+}
+
+.section-title h4 {
+	font-size: 40px;
+	text-transform: capitalize;
+	color: #FF5E18;
+	position: relative;
+	display: inline-block;
+    padding-bottom: 25px;
+    margin-top: 40px;
+}
+.section-title h4::before {
+	width: 80px;
+	height: 1.5px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -40px;
+}
+.section-title h4::before, .section-title h4::after {
+	position: absolute;
+	content: "";
+	background-color: #FF5E18;
+}
+.pro{
+    margin-top: -43px;
+}
+#myTabContent {
+	margin-top: 50px;
+}
+.menu_tab {
+	width: auto;
+	margin: 0 auto;
+}
+.nav-tabs .nav-item {
+	margin-bottom: -1px;
+}
+.nav-item a {
+	color: #333;
+}
+.menu_tab .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+	color: white;
+	background-color: #FF5E18;
+	border-color: #FF5E18;
+}
+.btn{
+    display: inline-block;
+    border: 2px solid blue;
+    margin-top: 3px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: bold;
+    color: brown;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    background-color: whitesmoke;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  .cl1 {
+      margin-top: 60px;
+    border-radius: 5px;
+    background-color: transparent;
+   
+ }
+  .al{
+      background-image: url('img/79.jpg');
+      background-size: 100% 100%;
+      
+  }
+  label{
+      color:black;
+      font-weight: bold;
+      font-size: 1.3rem;
+  }
+  .header{
+    width: 100%;
+    height: 100vh;
+    background-image:url('img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    clip-path: polygon(100% 0%, 100% 77%, 50% 100%, 0% 75%, 0 0);
+    
+}
+.header-section{
+    width: 100%;
+    height: inherit;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+.center-div{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+    
+
+
+
+.bg-success{
+    background-color: whitesmoke !important;
+    margin-bottom: -50px;
+}
+.py-4{
+    margin: 30px;
+}
+.col-md-12 a{
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.col-md-12 a:hover{
+    color: darkblue;
+}
+
+.footer{
+    background:black;
+    color:white;
+    margin-top: 110px;
+     }
+     .links ul {
+        list-style-type: none;
+        color:white !important;
+        }
+        .links ul li a{
+            color: white !important;
+         }
+        .about-company i{
+              font-size: 25px;
+              color: white;
+           }
+        .location i{
+            font-size: 18px;
+        }
+         
+        .per{
+            text-align: center;
+            color: white;
+            font-size: 29px;
+            font-weight: bold;
+        }
+    .about-company i{
+          font-size: 25px;
+       }
+    .location i{
+        font-size: 18px;
+    }
+    .copyright p
+    {
+        border-top:1px solid rgba(255,255,255,.1);
+    }
+  a{
+      color: black;
+  }
+    
+    .per{
+    text-align: center;
+    font-size: 1.3rem;
+    }
+    small{
+      margin-bottom: 0px;
+    }
+    
+    .col-md-3{
+        margin-bottom: 18px;
+    
+    }
+    .container-fluid{
+        margin-top: 20px;
+    }
+    .thumbnail img{
+        transform: .1s;
+        cursor: zoom-out;
+    }
+    .col-sm-6 {
+        background: #ccc;
+      }
+      input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+      
+      input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      
+      .cl1 {
+        border-radius: 5px;
+        background-color:transparent;
+       
+     }.all{
+         background-image: url("img/95.jpg");
+         background-size: cover;
+     }
+      .al{
+          background-image: url('img/11.jpg');
+          background-size: cover;
+          
+      }
+      label{
+          color:white;
+          font-weight: bold;
+          font-size: 1.2rem;
+      }
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-image:url("img/pp.jpg");
+        background-position:fixed;
+        background-size: cover;
+        color: white;
+        
+      }
+      h2{
+          background: black;
+      }
+    
+      
+      /* html {
+        box-sizing: border-box;
+      } */
+      
+      /* *, *:before, *:after {
+        box-sizing: inherit;
+      } */
+      
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+      
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+      }
+      
+      
+      .container {
+        padding: 0 16px;
+      }
+      
+      .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      
+      .title {
+        color: grey;
+      }
+      
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+      
+      .button:hover {
+        background-color: #555;
+      }
+      
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+            
+      
+    
+      .ml{
+        background-image: url("img/84.jpg") ;
+        background-position: fixed;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        font-family:cursive;
+        color:brown;
+        font-size: 20px;
+    
+    }
+    
+    .ml, html {
+        height: 100%;
+        margin: 0;
+      }
+      
+      .bg {
+        /* The image used */
+        background-image: url("img/bb7.jpg"); 
+      
+        /* Full height */
+        height: 100%; 
+      
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    h2{
+        font-family:cursive;
+        
+    }
+    .label{
+        font-size: 50px;
+        color: gray;
+    }
+    .container button:hover{
+        background-color:red;
+        color:whitesmoke;
+        transition: all ease 0.3s;
+    }
+    .form-control{
+      background-color: whitesmoke;
+    }
+    
