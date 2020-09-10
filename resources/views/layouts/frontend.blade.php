@@ -39,88 +39,50 @@
                   <li class="nav-item">
                     <a class="nav-link" href="#">&nbsp;&nbsp;<i class="fa fa-cart-plus"></i></a>
                   </li>
-                
+                  @if (Auth::user())
+                  <li class="nav-item dropdown">
+                                  
+                      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                          <i class="fa fa-user" aria-hidden="true"></i>
+                          {{ Auth::user()->name }} <span class="caret"></span>
+                      </a>
+
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        
+                          <a class="dropdown-item" href="{{ route('logout') }}"
+                             onclick="event.preventDefault();
+                                           document.getElementById('logout-form').submit();">
+                              {{ __('Logout') }}
+                          </a>
+
+                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                              @csrf
+                          </form>
+                      </div>
+                  </li>
+                  @endif
+          
               </ul>
             </div>
             </div>
           </nav>
-
+          @if (!Auth::user())
           <section class="header-section">
             <div class="center-div">
                 <h1 class="font-weight-bold">WE PROVIDE WORLD BEST MEAL</h1>
                 <P>The best food with the top services</P>
                 <div class="header-buttons">
-                    <a href="#">Login</a>
-                    <a href="#">Sign up</a>
+                <a href="{{url('login')}}">Login</a>
+                <a href="{{url('register')}}">Sign up</a>
                 </div>
             </div>
         </section>
+        @endif
      </div>
       
 
-     <h3>OUR SERVICES</h3>
-     <div class="categories-shop">
-        <div class="container-fluid all">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="{{asset('frontend/img/90.jpg') }}" alt="" />
-                        <a class="btn hvr-hover" href="#">Sweets</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="{{asset('frontend/img/74.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Fast food</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="{{asset('frontend/img/72.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Drinks</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img class="img-fluid" src="{{asset('frontend/img/81.jpg')}}" alt="" />
-                        <a class="btn hvr-hover" href="#">Indian special</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-     
-
-     <h3>ENJOY OUR CUISINE! </h3>
-     <div class="categories-shop">
-        <div class="container all">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img src="{{asset('frontend/img/1.png')}}" class="rounded-circle" alt="Cinque Terre" width="304" height="236"><br> 
-                        <a class="btn1 hvr-hover" href="#"><p>Book your table</p></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img src="{{asset('frontend/img/2.jpg')}}" class="rounded-circle" alt="Cinque Terre" width="304" height="236"><br> 
-                        <a class="btn1 hvr-hover" href="#"><p>Call Now</p></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <div class="shop-cat-box">
-                        <img src="{{asset('frontend/img/7.png')}}" class="rounded-circle" alt="Cinque Terre" width="304" height="236"><br> 
-                        <a class="btn1 hvr-hover" href="#"><p>Order Now</p></a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-
-
-
+     @include('flash-message')
+     @yield('content')
 
 
      
