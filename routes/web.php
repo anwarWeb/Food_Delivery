@@ -42,4 +42,10 @@ Route::middleware(['admin'])->group(function () {
 
 Route::resource('address','AddressController');
 
+Route::get('about_us', function(){
+    return view('frontend.about_us');
+})->name('about_us');
 
+Route::get('contact_us', function(){
+    return view('frontend.about_us');
+})->name('contact_us');

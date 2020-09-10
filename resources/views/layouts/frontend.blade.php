@@ -21,10 +21,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item active ">
-                  <a class="nav-link " href="index.html">&nbsp;&nbsp;&nbsp;Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link " href="{{url('/')}}">&nbsp;&nbsp;&nbsp;Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">&nbsp;&nbsp;&nbsp;About Us</a>
+                <a class="nav-link" href="{{route('about_us')}}">&nbsp;&nbsp;&nbsp;About Us</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="menu.html">&nbsp;&nbsp;&nbsp;Menu</a>
@@ -34,7 +34,7 @@
                     <a class="nav-link" href="franch.html">&nbsp;&nbsp;&nbsp;Franchise</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html">&nbsp;&nbsp;&nbsp;Contact us</a>
+                  <a class="nav-link" href="{{route('contact_us')}}">&nbsp;&nbsp;&nbsp;Contact us</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">&nbsp;&nbsp;<i class="fa fa-cart-plus"></i></a>
