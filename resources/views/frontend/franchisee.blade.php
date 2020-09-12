@@ -1,7 +1,6 @@
 @extends('layouts.frontend')
 
 @section('content')
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +11,7 @@
     <link rel="stylesheet" href="sec.css">
     <title>Restaurant food</title>
 </head>
-<body class="all">
+<body class="ml">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container text-uppercase p-2 m2">
@@ -51,27 +50,60 @@
 
 
 
-      <div class="container cl1">
+
+
+
+      <div class="container">
+
+        <h2 class="heading" style="font-size: 40px; color: white; margin-top: 30px;">For Franchise</h2>
         <form action="/action_page.php">
-          <label for="fname">Full Name</label>
-          <input type="text" id="fname" name="name" placeholder="Your name..">
-
-
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email" placeholder="Your email..">
-      
-      
-          <label for="lnumber">Mobile No.</label>
-          <input type="text" id="lnumber" name="number" placeholder="Your mobile number..">
-      
-          
-      
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="name" class="form-control" id="name" placeholder="Enter name" name="name">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="phone" class="form-control" id="phone" placeholder="Enter phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+          </div>
+          <div class="form-group">
+              <label for="confirm password">Confirm Password:</label>
+              <input type="confirm password" class="form-control" id="confirm password" placeholder="Enter confirm password" name="password">
+            </div>
+          <div class="form-group">
+                  <label for="comment">Address:</label>
+                  <textarea class="form-control" rows="2" id="Address" placeholder="Enter Address" name="address"></textarea>
+                </div>
+              
+          <div class="checkbox">
+            <label><input type="checkbox" name="remember"> Remember me</label>
+          </div>
+          <button type="register" class="btn btn-default" style="color: white; border: white;">Register</button>
         </form>
+      
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -164,5 +196,4 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
   </html>
-
-@endsection
+  @endsection

@@ -27,17 +27,17 @@
                 <a class="nav-link" href="{{route('about_us')}}">&nbsp;&nbsp;&nbsp;About Us</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="menu.html">&nbsp;&nbsp;&nbsp;Menu</a>
+                  <a class="nav-link" href="{{route('menu')}}">&nbsp;&nbsp;&nbsp;Menu</a>
                 </li>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="franch.html">&nbsp;&nbsp;&nbsp;Franchise</a>
+                    <a class="nav-link" href="{{route('franchisee')}}">&nbsp;&nbsp;&nbsp;Franchisee</a>
                   </li>
                   <li class="nav-item">
                   <a class="nav-link" href="{{route('contact_us')}}">&nbsp;&nbsp;&nbsp;Contact us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">&nbsp;&nbsp;<i class="fa fa-cart-plus"></i></a>
+                  <a class="nav-link" href="{{route('cart')}}">&nbsp;&nbsp;<i class="fa fa-cart-plus">{{Auth::user()?Auth::user()->cart->count():0}}</i></a>
                   </li>
                   @if (Auth::user())
                   <li class="nav-item dropdown">

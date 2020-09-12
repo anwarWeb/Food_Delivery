@@ -40,6 +40,24 @@ Route::middleware(['admin'])->group(function () {
     });
 });
 
+
+Route::middleware(['customer'])->group(function () {
+  
+        Route::get('cart','CartController@index')->name('cart');
+
+        Route::get('add-to-cart/{id}/{q}','CartController@addToCart')->name('add_to_cart');
+
+        Route::get('update-cart/{id}/{q}','CartController@updateCart')->name('update_cart');
+    
+        Route::get('remove-from-cart/{id}','CartController@removeFromCart')->name('remove_from_cart');
+
+        Route::get('/cart_checkout', 'OrderController@cartCheckout')->name('cart_checkout');
+        
+        Route::get('thanku', function(){
+            return view('frontend.thanku');
+        })->name('thanku');
+});
+
 Route::resource('address','AddressController');
 
 Route::get('about_us', function(){
@@ -47,5 +65,14 @@ Route::get('about_us', function(){
 })->name('about_us');
 
 Route::get('contact_us', function(){
-    return view('frontend.about_us');
+    return view('frontend.contact_us');
 })->name('contact_us');
+Route::get('menu', function(){
+    return view('frontend.menu');
+})->name('menu');
+Route::get('franchisee', function(){
+    return view('frontend.franchisee');
+})->name('franchisee');
+
+
+Route::get('/order_list', 'OrderController@getAllOrders');
